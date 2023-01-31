@@ -1,0 +1,99 @@
+env:
+  qa:
+    env_priority: 3
+    db_name:
+      dev_smartpromo:
+        container_version: alpha-v1.0      
+        app: promo
+        priority: 1
+        table_name: offer_configuration
+        column_name: status
+        submitted_id: 2
+        inprogress_id: 5
+        package_id_column: offer_config_id
+        secret_name: vit-admin-qa-db-credentials
+        S3_SECRET: vit-storage-key
+        BUCKET_NAME: rumosap37-os
+        container_id: crpm7nqi13evmnfupsst
+        failed_id: 4
+      
+      dev_pricing:
+        container_version: alpha-v1.0      
+        app: price
+        priority: 2
+        table_name: scenario_master
+        column_name: status_id
+        submitted_id: 2
+        inprogress_id: 5
+        package_id_column: scenario_id
+        secret_name: vit-admin-qa-db-credentials
+        S3_SECRET: vit-storage-key
+        BUCKET_NAME: rumosap37-os
+        container_id: crpa3d2423jofvev3qp8
+        failed_id: 106
+
+  uat:
+    env_priority: 2
+    db_name:
+      uat_smartpromo:
+        container_version: beta-v1.0      
+        app: promo
+        priority: 1
+        table_name: offer_configuration
+        column_name: status
+        submitted_id: 2
+        inprogress_id: 5
+        package_id_column: offer_config_id
+        secret_name: vit-admin-qa-db-credentials
+        S3_SECRET: vit-storage-key
+        BUCKET_NAME: rumosap37-os
+        container_id: crpae6d7oumps61vni4q
+        failed_id: 4
+
+      uat_smartprice:
+        container_version: beta-v1.0      
+        app: price
+        priority: 2
+        table_name: scenario_master
+        column_name: status_id
+        submitted_id: 100
+        inprogress_id: 105
+        package_id_column: scenario_id
+        secret_name: vit-admin-qa-db-credentials
+        S3_SECRET: vit-storage-key
+        BUCKET_NAME: rumosap37-os
+        container_id: crpajsnticqp801q3e93
+        failed_id: 106
+
+  prod:
+    env_priority: 1
+    db_name:
+      smartpromo:
+        container_version: v1.0      
+        app: promo
+        priority: 1
+        table_name: offer_configuration
+        column_name: status
+        submitted_id: 2
+        inprogress_id: 5
+        package_id_column: offer_config_id
+        secret_name: vit-admin-qa-db-credentials
+        S3_SECRET: vit-storage-key
+        BUCKET_NAME: rumosap37-os
+        container_id: crpsufl053d89lnkjhmp
+        failed_id: 106
+      
+      smartpricing:
+        app: price
+        container_version: v1.0        
+        priority: 2
+        table_name: scenario_master
+        column_name: status_id
+        submitted_id: 2
+        inprogress_id: 5
+        package_id_column: scenario_id
+        secret_name: vit-admin-qa-db-credentials
+        S3_SECRET: vit-storage-key
+        BUCKET_NAME: rumosap37-os
+        container_id: crpcpn36mb47k1ak09kv
+        failed_id: 106
